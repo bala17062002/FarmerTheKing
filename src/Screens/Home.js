@@ -6,6 +6,7 @@ import Opitionslogin from "../components/Opitionslogin";
 import Username from "../components/Username";
 import Agentlog from "../components/Agentlog";
 import Hpage from "../components/Hpage";
+import Register from "../components/Register";
 
 function Home(){
     const[flog,setflog] = useState(false);
@@ -27,6 +28,8 @@ function Home(){
         <Opitionslogin click={click} clicks={clicks}/>
         {flog ? <Farmerlog   />: <Agentlog />}
         </div>
+        <Hpage />
+        <Register />
     </div>
     )
 }
