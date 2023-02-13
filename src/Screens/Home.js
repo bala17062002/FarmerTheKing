@@ -5,6 +5,7 @@ import Farmerlog from "../components/Farmerlog";
 import Opitionslogin from "../components/Opitionslogin";
 import Username from "../components/Username";
 import Agentlog from "../components/Agentlog";
+import Hpage from "../components/Hpage";
 
 function Home(){
     const[flog,setflog] = useState(false);
@@ -18,15 +19,15 @@ function Home(){
             false
         )
     }
+
+   
     return(<div style={{backgroundColor:"#EDE4E0"}}>
         <Header />
         <div style={{display:"flex",flexDirection:"row",marginLeft:"10%",marginTop:"15%"}}>
         <Opitionslogin click={click} clicks={clicks}/>
         {flog ? <Farmerlog   />: <Agentlog />}
         </div>
-        
-       
-      
-    </div>)
+    </div>
+    )
 }
 export default Home;
