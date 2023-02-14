@@ -165,7 +165,7 @@ function Header(props) {
                                     alt='logo'
                                 />
                                 <Typography variant='h5' color='white'>
-                                    C2C Loan Platform
+                                    Farmer The King
                                 </Typography>
                             </Box>
                         </Box>

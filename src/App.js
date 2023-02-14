@@ -1,7 +1,6 @@
 
 import './App.css';
 import React, { createContext, useState } from 'react';
-import { ReactDOM } from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home";
 import Soiltestlogin from './Screens/Soiltestlogin';
