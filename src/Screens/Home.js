@@ -1,35 +1,18 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { ReactDOM } from "react-dom";
 import Header from "../components/Header";
 import Farmerlog from "../components/Farmerlog";
 import Opitionslogin from "../components/Opitionslogin";
 import Username from "../components/Username";
 import Agentlog from "../components/Agentlog";
-import Hpage from "../components/Hpage";
+import Hpage from "./Hpage";
 import Register from "../components/Register";
 
 function Home(){
-    const[flog,setflog] = useState(false);
-    function click(event){
-     setflog(
-         true
-     )
-    }
-    function clicks(event){
-        setflog(
-            false
-        )
-    }
-
-   
     return(<div style={{backgroundColor:"#EDE4E0"}}>
         <Header />
-        <div style={{display:"flex",flexDirection:"row",marginLeft:"10%",marginTop:"15%"}}>
-        <Opitionslogin click={click} clicks={clicks}/>
-        {flog ? <Farmerlog   />: <Agentlog />}
-        </div>
-        <Hpage />
-        <Register />
+       <Hpage />
     </div>
     )
 }
