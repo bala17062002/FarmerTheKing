@@ -20,8 +20,8 @@ export const LoanHome = () => {
                         src={Logo}
                         alt='logo'
                     />
-                    <Typography variant='h5' color='white'>
-                        C2C Loan Platform
+                    <Typography variant='h4' color='Black'>
+                        Farmer The King
                     </Typography>
                 </Box>
             </Box>
@@ -60,10 +60,10 @@ export const LoanHome = () => {
                     src={C2C}
                 />
                 <Typography variant='h4' color='white'>
-                    Customer to Customer Loans
+                    Loans to Farmers (Organic Farming)
                 </Typography>
                 <Typography variant='h6' color='white'>
-                    Apply Here at our website
+                    Only for farmers.
                 </Typography>
             </Box>
         )

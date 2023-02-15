@@ -47,8 +47,8 @@ const itemData = [
   },
   {
     img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'OrganicProducts',
-    path: '/'
+    title: 'organicProducts',
+    path: '/organicshop'
 
   }
 ]

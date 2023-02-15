@@ -130,7 +130,7 @@ function Header(props) {
         window !== undefined ? () => window().document.body : undefined
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', backgroundColor: "#F0EEED" }}>
             <CssBaseline />
             <AppBar
                 position='fixed'
@@ -145,6 +145,7 @@ function Header(props) {
                             display: 'flex',
                             width: '100%',
                             justifyContent: 'space-between',
+                            backgroundColor: "green"
                         }}
                     >
                         <IconButton
@@ -156,7 +157,7 @@ function Header(props) {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Box sx={{ padding: '0.5rem' }}>
+                        <Box sx={{ padding: '0.5rem', backgroundColor: "green" }}>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Box
                                     component='img'

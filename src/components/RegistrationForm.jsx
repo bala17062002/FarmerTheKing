@@ -101,7 +101,7 @@ export const RegistrationForm = ({ alreadyRegistered }) => {
                     autoComplete='current-password'
                 />
 
-                <Button
+                <Button sx={{ backgroundColor: "green" }}
                     onClick={() => formik.handleSubmit()}
                     variant='contained'
                 >
@@ -207,6 +207,7 @@ export const SignIn = ({ notRegistered }) => {
                 />
 
                 <Button
+                    sx={{ backgroundColor: "green" }}
                     onClick={() => navigate(ROUTES.APPLY_LOANS)}
                     variant='contained'
                 >

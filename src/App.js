@@ -11,6 +11,8 @@ import { LeandingLoansScreen } from './components/LendingLoans'
 import { LoanRequestsScreen } from './components/LoanRequests'
 import { MyLoansScreen } from './components/MyLoans'
 import { ProfileUpdateScreen } from './components/ProfileUpdate'
+import { Organicshop } from './Screens/Organicshop';
+import { Organichome } from './components/Organichome';
 
 export const StateContext = createContext({
   setuserDetails: () => { },
@@ -40,7 +42,6 @@ function App() {
 
           <Route path='/' element={<Home />} />
           <Route path='/loan' element={<LoanHome />} />
-
           <Route
             path={ROUTES.LOAN_REQUESTS}
             element={LoanRequestsScreen}
@@ -52,7 +53,9 @@ function App() {
             path={ROUTES.PROFILE_UPDATE}
             element={<ProfileUpdateScreen />}
           />
+          <Route path='/Organichome' element={<Organichome />} />
           <Route path='/soiltest' element={<Soiltestlogin />} />
+          <Route path='/organicshop' element={<Organicshop />} />
         </Routes>
       </StateContext.Provider>
     </BrowserRouter>
