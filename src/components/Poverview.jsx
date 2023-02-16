@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 import MainHeader from './MainHeader'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -13,14 +14,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Sliding from './Sliding';
-import { Organiccard } from './Organiccard';
-import Apple from '../images/apple.jpg';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-
-export const Organichome = () => {
+export const Poverview = (props) => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -38,6 +34,8 @@ export const Organichome = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    const location = useLocation()
 
     return (
         <div>
@@ -168,13 +166,12 @@ export const Organichome = () => {
                     </Container>
                 </AppBar>
             </div>
-            <Sliding />
-            <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
-                <Organiccard src={Apple} name="Apple" quantity="(1kg)" price="100(INR)" />
-                <Organiccard src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-230408,resizemode-1,msid-90791149/small-biz/trade/exports/insights/record-wheat-crop-high-stocks-to-help-india-meet-rising-global-demand.jpg" name="Wheat" quantity="(20kg)" price="800(INR)" />
-                <Organiccard src="https://5.imimg.com/data5/JC/HO/EF/SELLER-83358407/sack-of-rice-png-a-2000-500x500.jpg" name="Rice" quantity="(25kg)" price="1000(INR)" />
-                <Organiccard src="https://5.imimg.com/data5/RS/HE/AZ/SELLER-24138039/toor-dal-500x500.jpg" name="Dal" quantity="(10kg)" price="1200(INR)" />
+            {/* { <h1>{location.state.names}</h1> } */}
+            <div style={{ display: "flex", flexDirection: "row" }}>
+                <div style={{ backgroundColor: "green", width: "500px", height: "600px", marginTop: "10px", borderRadius: "15px", marginLeft: "60px" }}>
+                    <img src={location.state.image} alt={location.state.names} style={{ width: "500px", height: "500px", margin: "40px", borderRadius: "20px" }} />
+                </div>
             </div>
-        </div >
+        </div>
     )
 }

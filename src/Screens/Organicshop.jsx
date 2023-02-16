@@ -9,8 +9,8 @@ export const Organicshop = () => {
     return (
         <div>
             <MainHeader />
-            <div style={{ backgroundColor: "green", alignContent: "center" }}>
-                <h1 style={{ color: "white", textAlign: "center" }}>ORGANIC PRODUCTS</h1>
+            <div style={{ backgroundColor: "green" }}>
+                <div style={{ color: "white", textAlign: "center", marginBottom: "0" }}>ORGANIC PRODUCTS</div>
             </div>
 
             <div style={{
@@ -26,14 +26,12 @@ export const Organicshop = () => {
                 marginLeft: "40%",
                 marginRight: "40%", justifyContent: "center"
             }}>
-                <h1 style={{ color: "green" }}>Welcome Organic products</h1>
+                <h1 style={{ color: "green", fontSize: "25px" }}>Welcome to Organic products</h1>
                 <Username username="User-id" />
                 <Passwordfeild />
                 <Link to="/Organichome" >
                     <Button sx={{ backgroundColor: "green" }} variant="contained">Log in</Button>
                 </Link>
-
-
             </div>
         </div>
     )

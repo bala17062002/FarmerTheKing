@@ -13,6 +13,7 @@ import { MyLoansScreen } from './components/MyLoans'
 import { ProfileUpdateScreen } from './components/ProfileUpdate'
 import { Organicshop } from './Screens/Organicshop';
 import { Organichome } from './components/Organichome';
+import { Poverview } from './components/Poverview';
 
 export const StateContext = createContext({
   setuserDetails: () => { },
@@ -53,6 +54,7 @@ function App() {
             path={ROUTES.PROFILE_UPDATE}
             element={<ProfileUpdateScreen />}
           />
+          <Route path='/Poverview' element={<Poverview />} />
           <Route path='/Organichome' element={<Organichome />} />
           <Route path='/soiltest' element={<Soiltestlogin />} />
           <Route path='/organicshop' element={<Organicshop />} />
