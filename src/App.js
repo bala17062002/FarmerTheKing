@@ -14,6 +14,10 @@ import { ProfileUpdateScreen } from './components/ProfileUpdate'
 import { Organicshop } from './Screens/Organicshop';
 import { Organichome } from './components/Organichome';
 import { Poverview } from './components/Poverview';
+import { Fsoiltest } from './components/Fsoiltest';
+import { Requestsoil } from './components/Requestsoil';
+import { Soilres } from './components/Soilres';
+import { Contactus } from './components/Contactus';
 
 export const StateContext = createContext({
   setuserDetails: () => { },
@@ -54,6 +58,10 @@ function App() {
             path={ROUTES.PROFILE_UPDATE}
             element={<ProfileUpdateScreen />}
           />
+          <Route path='/Requestsoil' element={<Requestsoil />} />
+          <Route path='/Soilres' element={<Soilres />} />
+          <Route path='/Contact' element={<Contactus />} />
+          <Route path='/Fsoiltest' element={<Fsoiltest />} />
           <Route path='/Poverview' element={<Poverview />} />
           <Route path='/Organichome' element={<Organichome />} />
           <Route path='/soiltest' element={<Soiltestlogin />} />

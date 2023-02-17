@@ -171,6 +171,27 @@ export const Poverview = (props) => {
                 <div style={{ backgroundColor: "green", width: "500px", height: "600px", marginTop: "10px", borderRadius: "15px", marginLeft: "60px" }}>
                     <img src={location.state.image} alt={location.state.names} style={{ width: "500px", height: "500px", margin: "40px", borderRadius: "20px" }} />
                 </div>
+                <div>
+                    <h1 style={{ marginLeft: "200px", color: "green" }}> Farm Fresh <span>{location.state.names}</span> <span style={{ fontSize: "20px" }}>(100% Organic products)</span></h1>
+                    <h3 style={{ marginLeft: "400px", color: "green" }}>Price:
+                        <span>
+                            {location.state.cost}
+                        </span>
+                        per
+                        <span style={{ fontSize: "15px" }}>
+                            {location.state.Quantity}
+                        </span>
+                    </h3>
+                    <div style={{ width: "150px", height: "150px", backgroundColor: "#E1EEDD", marginLeft: "300px", borderRadius: "20px" }}>
+                        <p style={{ fontSize: "15px", textAlign: "center" }}>
+                            The products which are delivered to you are Fram fresh and delivered to you with in short period
+                        </p>
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "row", padding: "200px", marginLeft: "100px" }}>
+                        <Button sx={{ backgroundColor: "green", marginLeft: "5px" }} variant="contained">Add To cart</Button>
+                        <Button sx={{ backgroundColor: "green", marginLeft: "5px" }} variant="contained">Buy Now</Button>
+                    </div>
+                </div>
             </div>
         </div>
     )
