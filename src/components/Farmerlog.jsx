@@ -1,7 +1,6 @@
 import React from "react";
 import Username from "./Username";
 import Passwordfeild from "./Passwordfeild";
-import Circleimg from "./Circleimg";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -24,7 +23,7 @@ function Farmerlog() {
                 width: "10cm",
                 height: "8.1cm"
             }}>
-                <Circleimg />
+                <h1 style={{ color: "green", fontSize: "20px" }}>LOGIN-FARMER ACCOUNT</h1>
                 <Username username="Farmers id" />
                 <Passwordfeild />
                 <Link to="/Fsoiltest">

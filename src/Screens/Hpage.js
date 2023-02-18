@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css';
 import { Link } from "react-router-dom";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -6,7 +7,13 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 function Hpage(props) {
   return (<div>
     <div style={{}}>
-      <ImageList sx={{ overflow: "hidden" }} cols={3} onClick={props.onClick}>
+      <ImageList sx={{
+        overflow: 'hidden',
+        display: "flex",
+        flexDirection: "column",
+        marginLeft: "40%",
+        justifyContent: "center"
+      }} cols={3} onClick={props.onClick}>
         {itemData.map((item) => (
           <ImageListItem key={item.img} sx={{ width: "200px", height: "200px", margin: "5px" }}>
             <Link to={item.path}>
@@ -16,8 +23,7 @@ function Hpage(props) {
                 alt={item.title}
                 loading="lazy"
                 key={item.title}
-                width="200px"
-                height="200px"
+                className="image"
               />
             </Link>
             <ImageListItemBar
@@ -29,7 +35,7 @@ function Hpage(props) {
       </ImageList>
     </div>
 
-  </div>)
+  </div >)
 }
 const itemData = [
   {
@@ -39,14 +45,14 @@ const itemData = [
 
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+    img: 'https://oulms.in/wp-content/uploads/2020/08/f-1.jpg',
     title: 'Farmer Loan',
     path: '/loan'
 
 
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+    img: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b3JnYW5pYyUyMGZhcm1pbmd8ZW58MHx8MHx8&w=1000&q=80',
     title: 'organicProducts',
     path: '/organicshop'
 
