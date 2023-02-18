@@ -1,6 +1,9 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Apple from '../images/apple.jpg';
+import P1 from '../images/p1.jpeg';
+import P2 from '../images/p2.jpeg';
+import P3 from '../images/p3.jpeg';
 
 function Sliding() {
     return (
@@ -10,17 +13,14 @@ function Sliding() {
                 {itemData.map((item) => (
                     <Carousel.Item>
                         <img
-                            className="d-block w-100"
+                            // className="d-block w-100"
+                            style={{ width: "500px", height: "250px", marginLeft: "35%" }}
                             src={`${item.link}?w=248&fit=crop&auto=format`}
                             srcSet={`${item.link}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             alt="First slide"
-                            width="500px"
-                            height="350px"
+
+
                         />
-                        <Carousel.Caption>
-                            <h3>{item.heading}</h3>
-                            <p>{item.descrip}</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                 ))}
             </Carousel>
@@ -29,17 +29,17 @@ function Sliding() {
 }
 const itemData = [
     {
-        link: "https://images.pexels.com/photos/2487443/pexels-photo-2487443.jpeg?cs=srgb&dl=pexels-matheus-cenali-2487443.jpg&fm=jpg",
+        link: P2,
         heading: "Apples",
         descrip: "Buynow"
     },
     {
-        link: 'https://images.pexels.com/photos/2487443/pexels-photo-2487443.jpeg?cs=srgb&dl=pexels-matheus-cenali-2487443.jpg&fm=jpg',
+        link: P1,
         heading: "First offer",
         descrip: "Buynow"
     },
     {
-        link: 'https://images.pexels.com/photos/2487443/pexels-photo-2487443.jpeg?cs=srgb&dl=pexels-matheus-cenali-2487443.jpg&fm=jpg',
+        link: P3,
         heading: "First offer",
         descrip: "Buynow"
     }
