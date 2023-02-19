@@ -15,7 +15,12 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import P2 from '../images/Farm.jpg'
+import P2 from '../images/Farm.jpg';
+import dayjs from 'dayjs';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import { Link } from 'react-router-dom';
 
 
 export const Requestsoil = () => {
@@ -28,9 +33,11 @@ export const Requestsoil = () => {
     const handleClose = () => {
         setOpen(false);
     }
+    const [value, setValue] = React.useState(dayjs('2022-04-07'));
+
 
     return (
-        <div style={{ backgroundImage: `url(${P2})`, height: "100vh", backgroundRepeat: "no-repeat", backgroundSize: "100vw" }}>
+        <div style={{ backgroundImage: `url(${P2})`, height: "150vh", backgroundRepeat: "initial", backgroundSize: "100vw" }}>
             <MainHeader />
             <div style={{}}>
                 <h1 style={{ color: "green", fontSize: "30px", marginLeft: "22%" }}>Thanks for choosing
@@ -44,10 +51,9 @@ export const Requestsoil = () => {
                         padding: "10px 15px",
                         backgroundColor: "#F0EEED",
                         width: "12cm",
-                        height: "12cm",
-                        marginTop: "10%",
+                        marginTop: "5%",
                         marginBottom: "20%",
-                        marginLeft: "40%",
+                        marginLeft: "35%",
                         marginRight: "40%",
                         justifyContent: "center",
                         borderRadius: "20px",
@@ -91,7 +97,7 @@ export const Requestsoil = () => {
                         <div>
                             <div>
                                 <Button variant="outlined" onClick={handleClickOpen}
-                                    sx={{ marginTop: "5px" }}>
+                                    sx={{ margin: "5px" }}>
                                     Terms and conditions
                                 </Button>
                                 <Dialog
@@ -116,8 +122,29 @@ export const Requestsoil = () => {
                                     </DialogActions>
                                 </Dialog>
                             </div>
+                            <div>
+                                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                    <StaticDatePicker
+                                        displayStaticWrapperAs="mobile"
+                                        value={value}
+                                        onChange={(newValue) => {
+                                            setValue(newValue);
+
+                                        }
+                                        }
+                                        renderInput={(params) => <TextField {...params} />}
+                                        dayOfWeekFormatter={(day) => `${day}.`}
+                                        toolbarFormat="ddd DD MMMM"
+                                        showToolbar
+                                        width='100px'
+                                        height='100px'
+                                    />
+                                </LocalizationProvider>
+                            </div>
                         </div>
-                        <Button sx={{ backgroundColor: "green", marginTop: "6px" }} variant="contained">Log in</Button>
+                        <Link to="/Fsoiltest">
+                            <Button sx={{ backgroundColor: "green", marginTop: "6px" }} variant="contained">Submit</Button>
+                        </Link>
                     </div>
                 </div>
             </div>

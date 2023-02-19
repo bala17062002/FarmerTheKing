@@ -12,9 +12,7 @@ import { Button } from "@mui/material";
 import Passwordfeild from "./Passwordfeild";
 import { Link } from "react-router-dom";
 import MainHeader from "./MainHeader";
-import P1 from "../images/fcr.jpg"
-
-
+import P1 from "../images/fcr.jpg";
 
 
 function Register() {
@@ -64,10 +62,12 @@ function Register() {
           </RadioGroup>
         </FormControl>
         <Passwordfeild />
+
         <Link to='/Soiltest'>
-          <Button sx={{ backgroundColor: "green", marginTop: "6px" }} variant="contained">Log in</Button>
+          <Button sx={{ backgroundColor: "green", marginTop: "6px" }} variant="contained">submit</Button>
         </Link>
       </div>
     </div>)
 }
 export default Register;
+

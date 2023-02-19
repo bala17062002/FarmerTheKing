@@ -145,7 +145,7 @@ function Header(props) {
                             display: 'flex',
                             width: '100%',
                             justifyContent: 'space-between',
-                            backgroundColor: "green"
+                            backgroundColor: "#1976d2"
                         }}
                     >
                         <IconButton
@@ -157,7 +157,7 @@ function Header(props) {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Box sx={{ padding: '0.5rem', backgroundColor: "green" }}>
+                        <Box sx={{ padding: '0.5rem', backgroundColor: "#1976d2" }}>
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Box
                                     component='img'

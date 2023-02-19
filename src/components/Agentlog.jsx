@@ -2,6 +2,7 @@ import React from "react";
 import Username from "./Username";
 import Passwordfeild from "./Passwordfeild";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function Agentlog() {
     return (
@@ -26,7 +27,9 @@ function Agentlog() {
                 <h1 style={{ color: "green", fontSize: "20px" }}>LOGIN-AGENT ACCOUNT</h1>
                 <Username username="Agent's id" />
                 <Passwordfeild />
-                <Button sx={{ backgroundColor: "green" }} variant="contained">Log in</Button>
+                <Link to='/Agents'>
+                    <Button sx={{ backgroundColor: "green" }} variant="contained">Log in</Button>
+                </Link>
             </div>
         </div>
     )

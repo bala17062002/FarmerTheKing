@@ -1,7 +1,7 @@
 import React from 'react'
 import MainHeader from './MainHeader'
 import { Button } from "@mui/material";
-import P1 from '../images/apple.jpg';
+import P1 from '../images/cs.png';
 export const Contactus = () => {
     return (
         <div style={{

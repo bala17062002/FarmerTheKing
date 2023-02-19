@@ -19,6 +19,9 @@ import { Requestsoil } from './components/Requestsoil';
 import { Soilres } from './components/Soilres';
 import { Contactus } from './components/Contactus';
 import Register from './components/Register';
+import { Agentsh } from './components/Agentsh';
+import { Approved } from './components/Approved';
+import { Pending } from './components/Pending';
 
 export const StateContext = createContext({
   setuserDetails: () => { },
@@ -59,6 +62,9 @@ function App() {
             path={ROUTES.PROFILE_UPDATE}
             element={<ProfileUpdateScreen />}
           />
+          <Route path='/Approved' element={<Approved />} />
+          <Route path='/Pending' element={<Pending />} />
+          <Route path='/Agents' element={<Agentsh />} />
           <Route path="/Register" element={<Register />} />
           <Route path='/Requestsoil' element={<Requestsoil />} />
           <Route path='/Soilres' element={<Soilres />} />
