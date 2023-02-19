@@ -29,6 +29,9 @@ function Farmerlog() {
                 <Link to="/Fsoiltest">
                     <Button sx={{ backgroundColor: "green" }} variant="contained">Log in</Button>
                 </Link>
+                <Link to="/Register">
+                    <Button >Register/new user</Button>
+                </Link>
             </div>
         </div>
     )

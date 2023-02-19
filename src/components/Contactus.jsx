@@ -1,12 +1,11 @@
 import React from 'react'
 import MainHeader from './MainHeader'
 import { Button } from "@mui/material";
-import Apple from '../images/apple.jpg';
+import P1 from '../images/apple.jpg';
 export const Contactus = () => {
     return (
         <div style={{
-            backgroundImage: `url(${Apple})`,
-            backgroundSize: "100vh 100vh"
+            backgroundImage: `url(${P1})`, height: "100vh", backgroundRepeat: "no-repeat", backgroundSize: "100vw"
         }}>
             <MainHeader />
             <div style={{

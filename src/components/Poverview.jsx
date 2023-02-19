@@ -182,15 +182,28 @@ export const Poverview = (props) => {
                             {location.state.Quantity}
                         </span>
                     </h3>
-                    <div style={{ width: "150px", height: "150px", backgroundColor: "#E1EEDD", marginLeft: "300px", borderRadius: "20px" }}>
-                        <p style={{ fontSize: "15px", textAlign: "center" }}>
-                            The products which are delivered to you are Fram fresh and delivered to you with in short period
-                        </p>
+                    <div style={{ backgroundColor: "green", marginLeft: "300px", width: "7cm" }}>
+                        <ol>
+                            <li>Good Quality</li>
+                            <li>Chemical Free</li>
+                            <li>Healthy food</li>
+                            <li>Easy to order</li>
+                            <li>Maintains active-ness</li>
+
+                        </ol>
                     </div>
-                    <div style={{ display: "flex", flexDirection: "row", padding: "200px", marginLeft: "100px" }}>
-                        <Button sx={{ backgroundColor: "green", marginLeft: "5px" }} variant="contained">Add To cart</Button>
-                        <Button sx={{ backgroundColor: "green", marginLeft: "5px" }} variant="contained">Buy Now</Button>
+                    <div style={{ display: "flex", flexDirection: "row-reverse" }}>
+                        <div style={{ width: "150px", height: "150px", backgroundColor: "#E1EEDD", marginRight: "20px", borderRadius: "20px" }}>
+                            <p style={{ fontSize: "15px", textAlign: "center" }}>
+                                The products which are delivered to you are Fram fresh and delivered to you with in short period
+                            </p>
+                        </div>
+                        <div style={{ display: "flex", flexDirection: "row", padding: "200px", marginLeft: "-40px" }}>
+                            <Button sx={{ backgroundColor: "green", marginLeft: "5px", width: "5cm" }} variant="contained">Add To cart</Button>
+                            <Button sx={{ backgroundColor: "green", marginLeft: "5px", width: "5cm" }} variant="contained">Buy Now</Button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

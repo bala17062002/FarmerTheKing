@@ -3,28 +3,27 @@ import Opitionslogin from "../components/Opitionslogin";
 import Farmerlog from "../components/Farmerlog";
 import Agentlog from "../components/Agentlog";
 import MainHeader from "../components/MainHeader";
-import Apple from "../images/apple.jpg";
-import { height } from "@mui/system";
+import P2 from '../images/farmer1.jpg';
 
 
 function Soiltestlogin() {
     const [flog, setflog] = useState(false);
     function click(event) {
         setflog(
-            true
+            false
         )
     }
     function clicks(event) {
         setflog(
-            false
+            true
         )
     }
     return (
-        <div style={{ backgroundColor: "#DCEDC1", height: "100vh" }}>
+        <div style={{ backgroundImage: `url(${P2})`, height: "100vh", backgroundRepeat: "no-repeat", backgroundSize: "100vw" }}>
             <MainHeader />
-            <div style={{ display: "flex", flexDirection: "row", marginLeft: "10%", marginTop: "15%" }}>
+            <div style={{ display: "flex", flexDirection: "row", marginLeft: "10%", marginTop: "15%", opacity: "0.8" }}>
                 <Opitionslogin click={click} clicks={clicks} />
-                {flog ? <Farmerlog /> : <Agentlog />}
+                {flog ? <Agentlog /> : <Farmerlog />}
             </div>
         </div>
     )

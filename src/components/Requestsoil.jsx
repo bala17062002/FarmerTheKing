@@ -15,6 +15,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import P2 from '../images/Farm.jpg'
 
 
 export const Requestsoil = () => {
@@ -26,12 +27,12 @@ export const Requestsoil = () => {
 
     const handleClose = () => {
         setOpen(false);
-    };
+    }
 
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${P2})`, height: "100vh", backgroundRepeat: "no-repeat", backgroundSize: "100vw" }}>
             <MainHeader />
-            <div style={{ backgroundColor: "#DCEDC1", minHeight: "100vh" }}>
+            <div style={{}}>
                 <h1 style={{ color: "green", fontSize: "30px", marginLeft: "22%" }}>Thanks for choosing
                     <span style={{ fontSize: "50px", justifyContent: "center" }}>  Farmer <span style={{ fontSize: "30px" }}>The King</span></span>
                 </h1>
@@ -49,7 +50,8 @@ export const Requestsoil = () => {
                         marginLeft: "40%",
                         marginRight: "40%",
                         justifyContent: "center",
-                        borderRadius: "20px"
+                        borderRadius: "20px",
+                        opacity: "0.8"
                     }}>
                         <h5>Soiltest Request Form</h5>
                         <Username username="First name" />
